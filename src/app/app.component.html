@@ -1,1 +1,6 @@
-<input placeholder="введи своє місто">
+<div  (click)="toggleEditor('list')">Почати роботу</div>
+<br>
+<div *ngIf="showSearch"><app-search></app-search></div>
+<div *ngIf="showList" (click)="toggleEditor('search')"><app-list></app-list></div>
+<p><button (click)="getData()">Парсити з сайту</button></p>
+{{data}}
