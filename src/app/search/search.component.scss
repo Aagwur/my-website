@@ -1,0 +1,64 @@
+.start{
+    font: normal small-caps 120%/120% fantasy;
+    font-size: 100px;
+    color: rgb(188, 222, 255);
+    position: absolute; 
+    width: 200px; 
+    top: 40%; 
+    left: 50%;
+    opacity: .5;
+    margin: 0 0 0 -100px;
+    transition: .1s;
+}
+
+.start2{
+    font: normal small-caps 120%/120% fantasy;
+    font-size: 100px;
+    color: rgb(0, 22, 44);
+    position: absolute; 
+    width: 200px; 
+    top: 40%; 
+    left: 50%;
+    margin: 0 0 0 -100px;
+    opacity: .5;
+    transition: .1s;
+}
+
+.start:hover{
+    opacity: 1;
+    font-size: 104px;
+    margin: 0 0 0 -102px;
+}
+
+.start2:hover{
+    opacity: 1;
+    margin: 0 0 0 -102px;
+    font-size: 104px;
+}
+
+.title{
+    font: bold small-caps 120%/120% fantasy;
+    font-size: 120px;
+    color: white;
+    position: absolute; 
+    width: 800px; 
+    top: 5%; 
+    left: 50%;
+    margin: 0 0 0 -400px;
+    transition: .3s
+}
+
+.title:hover{
+    opacity: .8;
+}
+
+.text{
+    font: bold small-caps 120%/120% fantasy;
+    font-size: 40px;
+    color: #10172A;
+    position: absolute; 
+    width: 650px; 
+    top: 25%; 
+    left: 50%;
+    margin: 0 0 0 -325px;
+}

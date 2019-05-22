@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+
 import { WeatherService } from '../weather.service';
 
 @Component({
@@ -7,13 +9,17 @@ import { WeatherService } from '../weather.service';
   styleUrls: ['./search.component.scss']
 })
 export class SearchComponent implements OnInit {
+  lightModeActive: boolean;
+  subscription: Subscription;
 
   constructor(private service: WeatherService) { }
 
-  ngOnInit() {
+  modeToggleSwitch(){
+    this.service.enableLightMode.next(!this.lightModeActive);
   }
 
-  setCity(id: number){
-    this.service.id = id;
+  ngOnInit() { 
+    this.subscription = this.service.enableLightMode.subscribe(data => {
+    this.lightModeActive = data;})
   }
 }
