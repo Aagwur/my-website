@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 input {
     position: absolute;
     width: 300px;
@@ -9,8 +14,9 @@ input {
     border-left: none;
     border-top: none;
     border-right: none;
-    font-size: 20pt;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 140%;
+    letter-spacing: 0.4em;
     color: white;
     background: none;
     border-bottom-color: white;
@@ -40,32 +46,53 @@ input {
     opacity: 1;
 }
 
+.submit:active{
+    opacity: 1;
+    background: black;
+    top: 251px;
+}
+
 .temperature{
     font: bold small-caps 120%/120% fantasy;
-    font-size: 50px;
+    font-size: 40px;
     color: white;
     position: absolute; 
-    width:100%; 
-    top:50%; 
-    text-align:center;
+    width: 900px;
+    margin: 0 0 0 -450px;
+    top:300px; 
+    left: 50%;
+    text-align: center;
+}
+
+.temperature2{
+    font: bold small-caps 120%/120% fantasy;
+    font-size: 40px;
+    color:#10172A;
+    position: absolute; 
+    width: 900px;
+    margin: 0 0 0 -450px;
+    top:300px; 
+    left: 50%;
+    text-align: center;
 }
 
 .text{
     font: bold small-caps 120%/120% fantasy;
     font-size: 50px;
-    color: white;
-    position: absolute; 
-    width: 800px; 
-    top: 15%; 
-    left: 50%;
-    margin: 0 0 0 -400px;
+    color: white; 
+    position:absolute; 
+    left: 50%; 
+    top: 100px;
+    width: 1000px;
+    margin: 0 0 0 -500px;
+    text-align: center;
 }
 
 .top-menu{
     text-align: center;
     font-family: 'Open Sans', sans-serif;
     font-size: 120%;
-    font-weight: 100;
+    letter-spacing: 0.4em;
     background: rgba(0, 10, 39, 0.25);
     color: rgb(172, 177, 255);
     height: 65px;
@@ -77,6 +104,15 @@ input {
         background: rgba(0, 10, 39, 0.45);
         padding: 10px;
     }
+
+    .button1:hover {
+        background: rgba(0, 10, 39, 0.65);
+    }
+
+    .button1:active {
+        background: rgba(0, 10, 39, 0.85);
+        margin-top: 11px;
+    }
     
     .button2{
         position: absolute;
@@ -85,6 +121,18 @@ input {
         margin: 10px;
         background: rgba(0, 10, 39, 0.45);
         padding: 10px;
+    }
+
+    .button2:hover {
+        background: rgba(0, 10, 39, 0.65);
+    }
+
+    .button2:focus {
+        outline: none;
+    }
+    .button2:active {
+        background: rgba(0, 10, 39, 0.85);
+        margin-top: 11px;
     }
     
     .button3{
@@ -95,5 +143,74 @@ input {
         background: rgba(0, 10, 39, 0.45);
         padding: 10px;
     }
+
+    .button3:hover {
+        background: rgba(0, 10, 39, 0.65);
+    }
+
+    .button3:active {
+        background: rgba(0, 10, 39, 0.85);
+        margin-top: 11px;
+    }    
 }
 
+.addFav {
+    background: url(C:\500\my-website\src\app\list\like.png) no-repeat;
+    margin-left: 20px;
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    transition: .7s;
+    display: inline;
+}
+
+.addFav:hover{
+    opacity: .5;
+    font-size: 16px;
+}
+
+.addFav_ {
+    background: url(C:\500\my-website\src\app\list\like.png) no-repeat;
+    left: 950px;
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    transition: .7s;
+    display: inline;
+}
+
+.addFav_:hover{
+    opacity: .5;
+    font-size: 16px;
+}
+
+.more{
+    font: normal small-caps 120%/120% fantasy;
+    font-size: 40px;
+    letter-spacing: 0.1em;
+    position:absolute; 
+    left: 50%;
+    width: 300px;
+    margin: 0 0 0 -150px;
+    top: 110px;
+    transition: .1s;
+    text-align: center;
+    background: rgba(0, 10, 39, 0.45);
+    color: rgb(172, 177, 255);
+    padding: 5px 0 5px 0;
+    border-radius: 10px;
+}
+    
+.more:hover{
+    background: rgba(0, 10, 39, 0.65);
+}
+    
+.more:active{
+    background: rgba(0, 10, 39, 0.85);
+    top: 111px;
+}
+
+.more:focus{
+    outline: none;
+}
+    

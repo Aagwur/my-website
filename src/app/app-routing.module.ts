@@ -6,8 +6,8 @@ import { AppComponent }  from './app.component';
  
 const routes: Routes = [
   {path: '', component: AppComponent},
-  { path: 'search', component: SearchComponent },
-  { path: 'list', component: ListComponent },
+  { path: 'search', component: SearchComponent, data: {animation: 'SearchPage'} },
+  { path: 'list', component: ListComponent, data: {animation: 'ListPage'} },
   { path: 'main', component: AppComponent }
 ];
 

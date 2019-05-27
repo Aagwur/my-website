@@ -1,3 +1,6 @@
-<div class="image" [ngClass]="{'image2': lightModeActive}">
-    <router-outlet></router-outlet>
+<div class="image" [ngClass]="{'image2': lightModeActive}" [@routeAnimations]="prepareRoute(outlet)">
+    <router-outlet #outlet="outlet"></router-outlet>
 </div>
+<a class="link1" [ngClass]="{'link12': lightModeActive}" href="https://www.facebook.com/profile.php?id=100013640618207"></a>
+<a class="link2" [ngClass]="{'link22': lightModeActive}" href="https://www.linkedin.com/in/антон-дорощук-623449185/"></a>
+<a class="link3" [ngClass]="{'link32': lightModeActive}" href="https://github.com/Aagwur"></a>

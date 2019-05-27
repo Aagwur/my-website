@@ -1,15 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 .image{
-    height:40em; background-size:cover; width:auto;
-    background-image:url(C:\500\my-website\src\app\thunderstorm.jpg);
+    height:39.05em; background-size:cover; width:auto;
+    background-image:url(C:\500\my-website\src\app\thunderstorm.png);
     background-position:50% 50%;
     transition: 1s;
 }
 
 .image2{
-    height:40em; background-size:cover; width:auto;
+    height:39.05em; background-size:cover; width:auto;
     background-image:url(C:\500\my-website\src\app\lightsky.jpg);
     background-position:50% 50%;
     transition: 1s;
 }
+
+.link1{
+    top: 530px;
+    left: 40.5%;
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url(C:\500\my-website\src\app\search\facebook.png) no-repeat;
+    transition: .3s;
+    margin: 20px;
+}
+
+.link2{
+    top: 530px;
+    left: 45.5%;
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url(C:\500\my-website\src\app\search\linkedin.png) no-repeat;
+    transition: .3s;
+    margin: 20px;
+}
+
+.link3{
+    top: 530px;
+    left: 50.5%;
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url(C:\500\my-website\src\app\search\git.png) no-repeat;
+    transition: .3s;
+    margin: 20px;
+}
+
+.link1:hover{
+    opacity: .6;
+}
+
+.link2:hover{
+    opacity: .6;
+}
+
+.link3:hover{
+    opacity: .6;
+}
+
+.link12{
+    top: 530px;
+    left: 40.5%;
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url(C:\500\my-website\src\app\search\facebook.png) no-repeat;
+    transition: .3s;
+    margin: 20px;
+    opacity: .7;
+    filter: invert(1);
+}
+
+.link22{
+    top: 530px;
+    left: 45.5%;
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url(C:\500\my-website\src\app\search\linkedin.png) no-repeat;
+    transition: .3s;
+    margin: 20px;
+    opacity: .7;
+    filter: invert(1);
+}
+
+.link32{
+    top: 530px;
+    left: 50.5%;
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url(C:\500\my-website\src\app\search\git.png) no-repeat;
+    transition: .3s;
+    margin: 20px;
+    opacity: .7;
+    filter: invert(1);
+}
+
+.link12:hover{
+    opacity: .4;
+}
+
+.link22:hover{
+    opacity: .4;
+}
+
+.link32:hover{
+    opacity: .4;
+}
+
+
 
 

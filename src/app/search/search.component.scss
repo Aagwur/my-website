@@ -1,10 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 .start{
     font: normal small-caps 120%/120% fantasy;
     font-size: 100px;
     color: rgb(188, 222, 255);
     position: absolute; 
     width: 200px; 
-    top: 40%; 
+    top: 260px; 
     left: 50%;
     opacity: .5;
     margin: 0 0 0 -100px;
@@ -17,7 +22,7 @@
     color: rgb(0, 22, 44);
     position: absolute; 
     width: 200px; 
-    top: 40%; 
+    top: 260px; 
     left: 50%;
     margin: 0 0 0 -100px;
     opacity: .5;
@@ -30,10 +35,28 @@
     margin: 0 0 0 -102px;
 }
 
+.start:focus {
+    outline: none;
+}
+
+.start:active {
+    color: white;
+    top: 261px; 
+}
+
 .start2:hover{
     opacity: 1;
     margin: 0 0 0 -102px;
     font-size: 104px;
+}
+
+.start2:focus {
+    outline: none;
+}
+
+.start2:active {
+    color: black;
+    top: 261px; 
 }
 
 .title{
@@ -42,7 +65,7 @@
     color: white;
     position: absolute; 
     width: 800px; 
-    top: 5%; 
+    top: 30px; 
     left: 50%;
     margin: 0 0 0 -400px;
     transition: .3s
@@ -58,7 +81,35 @@
     color: #10172A;
     position: absolute; 
     width: 650px; 
-    top: 25%; 
+    top: 145px; 
     left: 50%;
     margin: 0 0 0 -325px;
 }
+
+.cities{
+    position: absolute;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 0.4em;
+    color: white;
+    left: 49%;
+    text-align: center;
+    width: 200px;
+    margin: 0 0 0 -100px;
+    top: 380px;
+    list-style-type: none;
+}
+
+.cities li{
+    position: relative;
+    list-style-type: none;
+}
+
+.cities li:focus {
+    outline: none;
+}
+
+
+
+

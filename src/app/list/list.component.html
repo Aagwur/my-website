@@ -1,16 +1,40 @@
 <div class="top-menu">
-    <div class="button1">weather forecast</div>
+    <div class="button1" (click)="toggleEditor('forecast');delete();getForecast(text.value)">weather forecast</div>
     <div class="button2" routerLink="/search">main page</div>
-    <div class="button3">current weather</div>
+    <div class="button3" (click)="toggleEditor('current');delete();getCurrent(text.value)">current weather</div>
 </div>
-<div class="text">input your city and get to know the weather in it</div>
 <div>
-    <input placeholder="input your city" [(ngModel)]="city">
-    <div class="submit" (click)="getData(city);">search</div>
+<div *ngIf="showCurrent">
+    <div @weather class="text">input your city and get to know the current weather in it</div>
+    <div>
+        <input #city [formControl]="text" placeholder="input your city" (keyup.enter)="getCurrent(city.value)">
+        <div class="submit" (click)="getCurrent(city.value)">search</div>
+    </div>
+    <div @fav class="temperature" [ngClass]="{'temperature2': lightModeActive}" *ngIf="showTemperature">
+        current temperature in {{city_t}} is {{temperature}} degrees
+        <div class="addFav" (click)="addFav(city.value);delete()"></div>
+        <div routerLink="/search" class="more">
+            view more
+        </div>
+    </div>
+    <div @fav class="temperature" [ngClass]="{'temperature2': lightModeActive}" *ngIf="showNone">
+        we can't find the city {{city_t}}
+    </div>
 </div>
-<div class="temperature" *ngIf="showTemperature">
-    current temperature in {{city_t}} is +{{temperature}} degrees
-</div>
-<div class="temperature" *ngIf="showNone">
-    we can't find the city {{city_t}}
+<div *ngIf="showForecast">
+    <div @weather class="text">input your city and get to know the weather forecast in it</div>
+    <div>
+        <input #city [formControl]="text" placeholder="input your city" (keyup.enter)="getForecast(city.value)">
+        <div class="submit" (click)="getForecast(city.value)">search</div>
+    </div>
+    <div @fav class="temperature" [ngClass]="{'temperature2': lightModeActive}" *ngIf="showTemperature">
+        max temperature in {{city_t}} today will be {{maxTemp}} degrees and lowest: {{minTemp}} degrees
+        <div class="addFav_" (click)="addFav(city.value);delete()"></div>
+        <div routerLink="/search" class="more">
+            view more
+        </div>
+    </div>
+    <div @fav class="temperature" [ngClass]="{'temperature2': lightModeActive}" *ngIf="showNone">
+        we can't find the city {{city_t}}
+    </div>
 </div>

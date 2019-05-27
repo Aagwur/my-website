@@ -11,6 +11,7 @@ import { WeatherService } from '../weather.service';
 export class SearchComponent implements OnInit {
   lightModeActive: boolean;
   subscription: Subscription;
+  cities: string[];
 
   constructor(private service: WeatherService) { }
 
@@ -18,8 +19,13 @@ export class SearchComponent implements OnInit {
     this.service.enableLightMode.next(!this.lightModeActive);
   }
 
+  addChosed(city: string){
+    this.service.chosedCity = city;
+  }
+
   ngOnInit() { 
     this.subscription = this.service.enableLightMode.subscribe(data => {
     this.lightModeActive = data;})
+    this.cities = this.service.cities;
   }
 }
