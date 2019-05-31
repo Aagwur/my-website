@@ -1,0 +1,21 @@
+<div class="left-menu">
+  <div class="back" routerLink="/list">go back</div>
+  <ul class="buttons">
+    <li #c1 [class.selected]="c1.value === s" (mouseenter)="getAll(c1.value)" value="0">condition</li>
+    <li #c2 [class.selected]="c2.value === s" (mouseenter)="getAll(c2.value)" value="1">wind characteristics</li>
+    <li #c3 [class.selected]="c3.value === s" (mouseenter)="getAll(c3.value)" value="2">air humidity</li>
+    <li #c4 [class.selected]="c4.value === s" (mouseenter)="getAll(c4.value)" value="3">atmosphere pressure</li>
+    <li #c5 [class.selected]="c5.value === s" (mouseenter)="getAll(c5.value)" value="4">sunrise and sunset</li>
+  </ul>
+</div>
+<div class="text" [ngClass]="{'text2': lightModeActive}">
+  <div [@char]="isOpen[0] ? 'open' : 'closed'" id="icon"></div>
+    <p [@char]="isOpen[0] ? 'open' : 'closed'" [class.sChar]="c1.value === s" >it is {{condition}} in {{city}} now</p>
+    <p [@char1]="isOpen[1] ? 'open' : 'closed'" [class.sChar]="c2.value === s" >wind direction is {{wind_dir}}</p>
+    <p [@char1]="isOpen[1] ? 'open' : 'closed'" [class.sChar]="c2.value === s">wind speed is {{wind_kph}} km/h</p>
+    <p [@char2]="isOpen[2] ? 'open' : 'closed'" [class.sChar]="c3.value === s">the humidity is {{humidity}}%</p>
+    <p [@char3]="isOpen[3] ? 'open' : 'closed'" [class.sChar]="c4.value === s">the pressure is {{pressure_mb}} mb</p>
+    <p [@char4]="isOpen[4] ? 'open' : 'closed'" [class.sChar]="c5.value === s">the sun rises at {{sunrise}}</p>
+    <p [@char4]="isOpen[4] ? 'open' : 'closed'" [class.sChar]="c5.value === s">the sun sets at {{sunset}}</p>
+</div>
+

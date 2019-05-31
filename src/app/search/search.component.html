@@ -1,12 +1,14 @@
 <div class="title" (click)="modeToggleSwitch()">SUPERWEATHER</div>
 <div class="text">it is exactly what you want from modern internet</div>
 <a><div class="start" (click)="addChosed('')" [ngClass]="{'start2': lightModeActive}" routerLink="/list">start</div></a>
-<div class="cities">
-    <ul *ngFor="let city of cities">
+<div class="cities" [ngClass]="{'citiesо2': lightModeActive}">
+    <ul *ngFor="let city of cities | slice:0:3 ">
         <li routerLink="/list" (click)="addChosed(city)">{{city}}</li>
     </ul>
 </div>
-
+<div @message *ngIf="message" class="message" (click)="closeMessage()">
+    click on logo to change theme
+</div>
 
 
 

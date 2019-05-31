@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-.start{
+.start, .start2{
     font: normal small-caps 120%/120% fantasy;
     font-size: 100px;
     color: rgb(188, 222, 255);
@@ -17,41 +17,22 @@
 }
 
 .start2{
-    font: normal small-caps 120%/120% fantasy;
-    font-size: 100px;
     color: rgb(0, 22, 44);
-    position: absolute; 
-    width: 200px; 
-    top: 260px; 
-    left: 50%;
-    margin: 0 0 0 -100px;
-    opacity: .5;
-    transition: .1s;
 }
 
-.start:hover{
+.start:hover, .start2:hover{
     opacity: 1;
     font-size: 104px;
     margin: 0 0 0 -102px;
 }
 
-.start:focus {
+.start:focus, .start2:focus {
     outline: none;
 }
 
 .start:active {
     color: white;
     top: 261px; 
-}
-
-.start2:hover{
-    opacity: 1;
-    margin: 0 0 0 -102px;
-    font-size: 104px;
-}
-
-.start2:focus {
-    outline: none;
 }
 
 .start2:active {
@@ -86,7 +67,7 @@
     margin: 0 0 0 -325px;
 }
 
-.cities{
+.cities, .cities2{
     position: absolute;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
@@ -101,15 +82,42 @@
     list-style-type: none;
 }
 
-.cities li{
+.cities2{
+    color: #10172A;
+}
+
+.cities li, .cities2 li{
     position: relative;
     list-style-type: none;
 }
 
-.cities li:focus {
+.cities li:focus, .cities2 li:focus {
     outline: none;
 }
 
+.message{
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    top: 200px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.55);
+    color: rgb(26, 0, 97);
+    left: 805px;
+    width: 400px;
+    border-radius: 0 30px 30px 30px;
+    padding: 10px 0 10px 0;
+}
+
+.message:hover{
+    background: rgba(255, 255, 255, 0.85);
+}
+
+.message:active{
+    background: white;
+    padding: 11px 0 11px 0;
+}
 
 
 

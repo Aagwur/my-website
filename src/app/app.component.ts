@@ -34,6 +34,26 @@ const slideInAnimation =
           animate('400ms ease-out', style({ top: '0px'}))
         ])
       ])
+    ]),
+    transition('ListPage <=> MorePage', [
+      query(':enter, :leave', [
+        style({
+          position: 'absolute',
+          width: '100%',
+          height: '100%'
+        })
+      ]),
+      query(':enter', [
+        style({ left: '-100%'})
+      ]),
+      group([
+        query(':leave', [
+          animate('400ms ease-out', style({ opacity: '0'}))
+        ]),
+        query(':enter', [
+          animate('400ms ease-out', style({ left: '0px'}))
+        ])
+      ])
     ])
   ]);
 

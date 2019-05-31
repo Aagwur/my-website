@@ -1,7 +1,7 @@
 <div class="top-menu">
-    <div class="button1" (click)="toggleEditor('forecast');delete();getForecast(text.value)">weather forecast</div>
+    <div class="button1" (click)="toggleEditor('forecast');delete();getForecast(text.value);closeMessage()">weather forecast</div>
     <div class="button2" routerLink="/search">main page</div>
-    <div class="button3" (click)="toggleEditor('current');delete();getCurrent(text.value)">current weather</div>
+    <div class="button3" (click)="toggleEditor('current');delete();getCurrent(text.value);closeMessage()">current weather</div>
 </div>
 <div>
 <div *ngIf="showCurrent">
@@ -12,8 +12,8 @@
     </div>
     <div @fav class="temperature" [ngClass]="{'temperature2': lightModeActive}" *ngIf="showTemperature">
         current temperature in {{city_t}} is {{temperature}} degrees
-        <div class="addFav" (click)="addFav(city.value);delete()"></div>
-        <div routerLink="/search" class="more">
+        <div class="addFav" *ngIf="like" (click)="addFav(city.value)"></div>
+        <div routerLink="/more" (click)="cityIn()" class="more" [ngClass]="{'more2': lightModeActive}">
             view more
         </div>
     </div>
@@ -28,13 +28,17 @@
         <div class="submit" (click)="getForecast(city.value)">search</div>
     </div>
     <div @fav class="temperature" [ngClass]="{'temperature2': lightModeActive}" *ngIf="showTemperature">
-        max temperature in {{city_t}} today will be {{maxTemp}} degrees and lowest: {{minTemp}} degrees
-        <div class="addFav_" (click)="addFav(city.value);delete()"></div>
-        <div routerLink="/search" class="more">
+        max temperature in {{city_t}} today will be {{maxTemp}} degrees and lowest: 
+        <div class="addFav_" *ngIf="like" (click)="addFav(city.value)"></div>
+        {{minTemp}} degrees        
+        <div routerLink="/more" (click)="cityIn()" class="more" [ngClass]="{'more2': lightModeActive}">
             view more
         </div>
     </div>
     <div @fav class="temperature" [ngClass]="{'temperature2': lightModeActive}" *ngIf="showNone">
         we can't find the city {{city_t}}
     </div>
+</div>
+<div @message *ngIf="message" class="message" [ngClass]="{'message_': !typeMes}" (click)="close()">
+    {{city_t}} have added to favourite cities you can choose on the main page
 </div>

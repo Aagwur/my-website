@@ -1,0 +1,73 @@
+.left-menu{
+    position: absolute;
+    text-align: center;
+    width: 25%;
+    background: rgba(0, 10, 39, 0.25);
+    color: rgb(172, 177, 255);
+    height: 100%;
+    .back{
+        font: bold small-caps 120%/120% fantasy;
+        margin: 10px;
+        background: rgba(0, 10, 39, 0.45);
+        font-size: 70px;
+    }
+
+    .back:hover {
+        background: rgba(0, 10, 39, 0.65);
+    }
+
+    .back:active {
+        margin-top: 11px;
+        background: rgba(0, 10, 39, 0.85);
+    }  
+
+    .back:focus {
+        outline: none;
+    } 
+
+    .buttons{
+        position: absolute;
+        font-family: 'Open Sans', sans-serif;
+        letter-spacing: 0.4em;
+        font-size: 20px;
+        margin-top: 15px;   
+    }
+    
+    .buttons li{
+        padding: 15px;
+        margin: 2px 10px 2px 10px;
+        background: rgba(0, 10, 39, 0.45);       
+    }
+
+    .buttons li:hover{
+        background: rgba(0, 10, 39, 0.99);
+    }
+
+    .buttons li:active{
+        background: black;
+        margin-top: 3px;
+    }
+
+    .buttons .selected{
+        background: rgba(0, 10, 39, 0.99);
+    }
+}
+
+.text, .text2{
+    position:absolute; 
+    font: bold small-caps 120%/120% fantasy;
+    font-size: 50px;
+    color: rgba(255, 255, 255, 0.2); 
+    left: 350px; 
+    top: 10px;
+    .sChar {
+        font-size: 60px;
+        color: rgb(255, 255, 255); 
+        text-shadow: 1px 1px 2px black;
+    }
+}
+
+.text2{
+    color: rgba(255, 255, 255, 0.5);
+}
+

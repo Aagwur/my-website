@@ -8,14 +8,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListComponent } from './list/list.component';
 import { SearchComponent } from './search/search.component';
-import { WeatherSearchComponent } from './weather-search/weather-search.component';
+import { MoreComponent } from './more/more.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListComponent,
     SearchComponent,
-    WeatherSearchComponent
+    MoreComponent
   ],
   imports: [
     HttpClientModule,

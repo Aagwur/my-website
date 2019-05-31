@@ -9,7 +9,7 @@ input {
     top: 180px;
     left: 50%;
     padding: 10px;
-    margin: 0 0 0 -150px;
+    margin: 0 0 0 -160px;
     outline: none;
     border-left: none;
     border-top: none;
@@ -22,7 +22,6 @@ input {
     border-bottom-color: white;
     border-bottom-width: 3px;
     text-align: center; 
-    
 }
 
 .submit{
@@ -30,7 +29,7 @@ input {
     top: 250px;
     width: 150px;
     left: 50%;
-    margin: 0 0 0 -75px;
+    margin: 0 0 0 -85px;
     padding: 5px;
     font-size: 20pt;
     font-family: Arial, Helvetica, sans-serif;
@@ -52,28 +51,20 @@ input {
     top: 251px;
 }
 
-.temperature{
+.temperature, .temperature2{
     font: bold small-caps 120%/120% fantasy;
     font-size: 40px;
     color: white;
     position: absolute; 
     width: 900px;
     margin: 0 0 0 -450px;
-    top:300px; 
+    top: 300px; 
     left: 50%;
     text-align: center;
 }
 
 .temperature2{
-    font: bold small-caps 120%/120% fantasy;
-    font-size: 40px;
     color:#10172A;
-    position: absolute; 
-    width: 900px;
-    margin: 0 0 0 -450px;
-    top:300px; 
-    left: 50%;
-    text-align: center;
 }
 
 .text{
@@ -86,131 +77,143 @@ input {
     width: 1000px;
     margin: 0 0 0 -500px;
     text-align: center;
+    text-shadow: 1px 1px 2px black;
 }
 
 .top-menu{
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 120%;
-    letter-spacing: 0.4em;
     background: rgba(0, 10, 39, 0.25);
     color: rgb(172, 177, 255);
     height: 65px;
-    .button1{
+    .button1, .button2, .button3{
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 120%;
+        letter-spacing: 0.4em;
         position: absolute;
-        left: 1%;
-        width: 26rem;
-        margin: 10px;
+        padding: 10px 0 10px 0;
+        margin: 10px 0 10px 0;
         background: rgba(0, 10, 39, 0.45);
-        padding: 10px;
+        width: 445px;
     }
 
-    .button1:hover {
-        background: rgba(0, 10, 39, 0.65);
+    .button1 {
+        left: 0px;
     }
 
-    .button1:active {
-        background: rgba(0, 10, 39, 0.85);
-        margin-top: 11px;
-    }
-    
     .button2{
-        position: absolute;
-        left: 33.5%;
-        width: 26rem;
-        margin: 10px;
-        background: rgba(0, 10, 39, 0.45);
-        padding: 10px;
+        left: 460px;
     }
 
-    .button2:hover {
+    .button3{
+        left: 920px;
+    }
+
+    .button1:hover, .button2:hover, .button3:hover {
         background: rgba(0, 10, 39, 0.65);
     }
 
-    .button2:focus {
-        outline: none;
-    }
-    .button2:active {
+    .button1:active, .button2:active, .button3:active {
         background: rgba(0, 10, 39, 0.85);
         margin-top: 11px;
     }
     
-    .button3{
-        position: absolute;
-        left: 66%;
-        width: 26rem;
-        margin: 10px;
-        background: rgba(0, 10, 39, 0.45);
-        padding: 10px;
-    }
-
-    .button3:hover {
-        background: rgba(0, 10, 39, 0.65);
-    }
-
-    .button3:active {
-        background: rgba(0, 10, 39, 0.85);
-        margin-top: 11px;
-    }    
+    .button1:focus, .button2:focus, .button3:focus {
+        outline: none;
+    }   
 }
 
-.addFav {
+.addFav, .addFav_ {
+    position: absolute;
     background: url(C:\500\my-website\src\app\list\like.png) no-repeat;
     margin-left: 20px;
     width: 48px;
     height: 48px;
-    position: absolute;
     transition: .7s;
     display: inline;
 }
 
-.addFav:hover{
+.addFav:hover, .addFav_:hover{
     opacity: .5;
     font-size: 16px;
+}
+
+.addFav:active, .addFav_:active{
+    margin-top: 3px;
+    transition: .1s;
 }
 
 .addFav_ {
-    background: url(C:\500\my-website\src\app\list\like.png) no-repeat;
-    left: 950px;
-    width: 48px;
-    height: 48px;
-    position: absolute;
-    transition: .7s;
-    display: inline;
+    left: 950px;  
 }
 
-.addFav_:hover{
-    opacity: .5;
-    font-size: 16px;
-}
-
-.more{
+.more, .more2{
     font: normal small-caps 120%/120% fantasy;
-    font-size: 40px;
-    letter-spacing: 0.1em;
-    position:absolute; 
+    font-size: 100px;
+    color: rgb(188, 222, 255);
+    position: absolute; 
+    width: 500px; 
+    top: 60px; 
     left: 50%;
-    width: 300px;
-    margin: 0 0 0 -150px;
-    top: 110px;
+    opacity: .5;
+    margin: 0 0 0 -250px;
     transition: .1s;
-    text-align: center;
-    background: rgba(0, 10, 39, 0.45);
-    color: rgb(172, 177, 255);
-    padding: 5px 0 5px 0;
-    border-radius: 10px;
-}
-    
-.more:hover{
-    background: rgba(0, 10, 39, 0.65);
-}
-    
-.more:active{
-    background: rgba(0, 10, 39, 0.85);
-    top: 111px;
 }
 
-.more:focus{
+.more2{
+    color: rgb(0, 22, 44);
+}
+
+.more:hover, .more2:hover{
+    opacity: 1;
+    font-size: 104px;
+    margin: 0 0 0 -252px;
+}
+
+.more:focus, .more2:focus {
     outline: none;
 }
+
+.more:active {
+    color: white;
+    top: 61px; 
+}
+
+.more2:active {
+    color: black;
+    top: 61px; 
+}
     
+.message, .message_{
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.55);
+    color: rgb(26, 0, 97);
+    width: 300px;
+    padding: 10px;
+}
+
+.message{
+    top: 240px;
+    left: 1005px;
+    border-radius: 30px 30px 30px 0;
+}
+
+.message_{
+    border-radius: 30px 0 30px 30px;
+    top: 350px;
+    left: 905px;
+}
+
+.message:hover, .message_:hover{
+    background: rgba(255, 255, 255, 0.85);
+}
+
+.message:active, .message_:active{
+    background: white;
+    padding: 11px 10px 11px 10px;
+}
+
+
