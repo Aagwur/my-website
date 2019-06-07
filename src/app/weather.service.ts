@@ -7,7 +7,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class WeatherService {
-  enableLightMode: BehaviorSubject<boolean> = new BehaviorSubject(false);
+  enableLightMode: BehaviorSubject<boolean> = new BehaviorSubject(true);
   cities: string[] = ['rivne'];
   chosedCity: string = '';
   check: any;

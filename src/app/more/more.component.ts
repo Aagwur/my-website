@@ -12,95 +12,31 @@ import { WeatherService } from '../weather.service';
 
 const charAnimation =
   trigger('char', [
-    state('open', style({
+    state('open1', style({
       'position': 'relative',
       'font-size': '90px',
       'left': '25px',
       'top': '170px',
     })),
-    state('closed', style({
-      'font-size': '60px',
-      'left': '0px',
-      'top': '0px',
-      'position': 'relative'
-    })),
-    transition('open => closed', [
-      animate('.15s')
-    ]),
-    transition('closed => open', [
-      animate('.3s')
-    ])
-  ]) 
-
-const charAnimation1 =
-  trigger('char1', [
-    state('open', style({
+    state('open2', style({
       'position': 'relative',
       'font-size': '90px',
       'left': '25px',
       'top': '85px',
     })),
-    state('closed', style({
-      'font-size': '60px',
-      'left': '0px',
-      'top': '0px',
-      'position': 'relative'
-    })),
-    transition('open => closed', [
-      animate('.15s')
-    ]),
-    transition('closed => open', [
-      animate('.3s')
-    ])
-  ])  
-  
-const charAnimation2 =
-  trigger('char2', [
-    state('open', style({
+    state('open3', style({
       'position': 'relative',
       'font-size': '90px',
       'left': '25px',
       'top': '-10px',
     })),
-    state('closed', style({
-      'font-size': '60px',
-      'left': '0px',
-      'top': '0px',
-      'position': 'relative'
-    })),
-    transition('open => closed', [
-      animate('.15s')
-    ]),
-    transition('closed => open', [
-      animate('.3s')
-    ])
-  ])  
-
-  const charAnimation3 =
-  trigger('char3', [
-    state('open', style({
+    state('open4', style({
       'position': 'relative',
       'font-size': '90px',
       'left': '25px',
       'top': '-70px',
     })),
-    state('closed', style({
-      'font-size': '60px',
-      'left': '0px',
-      'top': '0px',
-      'position': 'relative'
-    })),
-    transition('open => closed', [
-      animate('.15s')
-    ]),
-    transition('closed => open', [
-      animate('.3s')
-    ])
-  ])  
-
-const charAnimation4 =
-  trigger('char4', [
-    state('open', style({
+    state('open5', style({
       'position': 'relative',
       'font-size': '90px',
       'left': '25px',
@@ -112,23 +48,20 @@ const charAnimation4 =
       'top': '0px',
       'position': 'relative'
     })),
-    transition('open => closed', [
+    transition('* => closed', [
       animate('.15s')
     ]),
-    transition('closed => open', [
+    transition('closed => *', [
       animate('.3s')
     ])
-  ])   
+  ]) 
+   
 @Component({
   selector: 'app-more',
   templateUrl: './more.component.html',
   styleUrls: ['./more.component.scss'],
   animations: [
-    charAnimation,
-    charAnimation1,
-    charAnimation2,
-    charAnimation3,
-    charAnimation4
+    charAnimation
   ]
 })
 export class MoreComponent implements OnInit {

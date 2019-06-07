@@ -3,25 +3,41 @@
     text-align: center;
     width: 25%;
     background: rgba(0, 10, 39, 0.25);
-    color: rgb(172, 177, 255);
     height: 100%;
-    .back{
-        font: bold small-caps 120%/120% fantasy;
+    .back, .back2{
+        font: bold normal 120%/120% fantasy;
+        border: 3px solid rgb(188, 222, 255);
+        color: rgb(188, 222, 255);
+        border-radius: 60px;
         margin: 10px;
-        background: rgba(0, 10, 39, 0.45);
-        font-size: 70px;
+        background: none;
+        font-size: 50px;
+        opacity: .5;
     }
 
-    .back:hover {
-        background: rgba(0, 10, 39, 0.65);
+    .back2{
+        color: rgb(0, 22, 44);
+        border: 3px solid rgb(0, 22, 44);
     }
 
-    .back:active {
+    .back:hover, .back2:hover{
+        opacity: 1;
         margin-top: 11px;
-        background: rgba(0, 10, 39, 0.85);
-    }  
+    }
 
-    .back:focus {
+    .back:active{
+        margin-top: 11px;
+        border-color: white;
+        color: white;
+    } 
+    
+    .back2:active{
+        margin-top: 11px;
+        border-color: black;
+        color: black;
+    } 
+
+    .back:focus, .back2:focus{
         outline: none;
     } 
 
@@ -30,7 +46,8 @@
         font-family: 'Open Sans', sans-serif;
         letter-spacing: 0.4em;
         font-size: 20px;
-        margin-top: 15px;   
+        margin-top: 15px;  
+        color: rgb(172, 177, 255); 
     }
     
     .buttons li{
@@ -42,21 +59,13 @@
     .buttons li:hover{
         background: rgba(0, 10, 39, 0.99);
     }
-
-    .buttons li:active{
-        background: black;
-        margin-top: 3px;
-    }
-
-    .buttons .selected{
-        background: rgba(0, 10, 39, 0.99);
-    }
 }
 
 .text, .text2{
     position:absolute; 
     font: bold small-caps 120%/120% fantasy;
-    font-size: 50px;
+    font-size: 40px;
+    width: 900px;
     color: rgba(255, 255, 255, 0.2); 
     left: 350px; 
     top: 10px;

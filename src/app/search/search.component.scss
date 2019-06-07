@@ -4,26 +4,28 @@
 }
 
 .start, .start2{
-    font: normal small-caps 120%/120% fantasy;
-    font-size: 100px;
+    font: normal normal 120%/120% fantasy;
+    font-size: 70px;
     color: rgb(188, 222, 255);
     position: absolute; 
-    width: 200px; 
+    border: 4px solid rgb(188, 222, 255);
     top: 260px; 
     left: 50%;
     opacity: .5;
-    margin: 0 0 0 -100px;
+    margin: 0 0 0 -125px;
     transition: .1s;
+    border-radius: 40px;
+    padding: 5px 20px 5px 20px;
 }
 
 .start2{
     color: rgb(0, 22, 44);
+    border: 4px solid rgb(0, 22, 44);
 }
 
 .start:hover, .start2:hover{
     opacity: 1;
-    font-size: 104px;
-    margin: 0 0 0 -102px;
+    padding: 6px 20px 6px 20px;
 }
 
 .start:focus, .start2:focus {
@@ -32,11 +34,13 @@
 
 .start:active {
     color: white;
+    border-color: white;
     top: 261px; 
 }
 
 .start2:active {
     color: black;
+    border-color: black;
     top: 261px; 
 }
 

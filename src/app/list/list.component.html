@@ -14,7 +14,7 @@
         current temperature in {{city_t}} is {{temperature}} degrees
         <div class="addFav" *ngIf="like" (click)="addFav(city.value)"></div>
         <div routerLink="/more" (click)="cityIn()" class="more" [ngClass]="{'more2': lightModeActive}">
-            view more
+            VIEW MORE
         </div>
     </div>
     <div @fav class="temperature" [ngClass]="{'temperature2': lightModeActive}" *ngIf="showNone">
@@ -32,7 +32,7 @@
         <div class="addFav_" *ngIf="like" (click)="addFav(city.value)"></div>
         {{minTemp}} degrees        
         <div routerLink="/more" (click)="cityIn()" class="more" [ngClass]="{'more2': lightModeActive}">
-            view more
+            VIEW MORE
         </div>
     </div>
     <div @fav class="temperature" [ngClass]="{'temperature2': lightModeActive}" *ngIf="showNone">
